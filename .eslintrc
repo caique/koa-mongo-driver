@@ -1,0 +1,16 @@
+{
+  "extends": ["airbnb-base", "plugin:jest/recommended"],
+  "plugins": ["jest"],
+  "env": {
+    "jest/globals": true,
+    "node": true
+  },
+  "rules": {
+    "max-len": ["error", 90, 4, {
+      "ignoreComments": true,
+      "ignoreUrls": true,
+      "ignorePattern": "^\\s*var\\s.+=\\s*(require\\s*\\()|(/)"
+    }],
+    "no-console": "off"
+  }
+}

@@ -1,22 +1,35 @@
 {
   "name": "koa-mongo-driver",
-  "version": "0.1.0",
   "description": "MongoDB middleware developed on top of official node-mongodb-native.",
+  "version": "0.1.0",
+  "license": "MIT",
   "main": "lib/mongo.js",
   "author": "Caique Rodrigues <caiquepeixoto1@gmail.com>",
-  "keywords": [
-    "koa",
-    "middleware",
-    "mongo",
-    "mongodb",
-    "nosql"
-  ],
-  "engines": {
-    "node": ">= 4"
-  },
+  "keywords": [ "koa", "middleware", "mongo", "mongodb", "nosql"],
   "repository": {
     "type": "git",
     "url": "https://github.com/caique/koa-mongo-driver.git"
   },
-  "license": "MIT"
+  "scripts": {
+    "test": "jest",
+    "posttest": "eslint . --fix",
+    "precommit": "npm test",
+    "prepush": "npm test"
+  },
+  "dependencies": {
+    "mongodb": "^3.1.0-beta4"
+  },
+  "devDependencies": {
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.12.0",
+    "eslint-plugin-jest": "^21.17.0",
+    "husky": "^0.14.3",
+    "jest": "^23.0.1",
+    "koa": "^2.5.1",
+    "supertest": "^3.1.0"
+  },
+  "engines": {
+    "node": ">= 4"
+  }
 }
