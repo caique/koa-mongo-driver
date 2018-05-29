@@ -1,0 +1,22 @@
+{
+  "name": "koa-mongo-driver",
+  "version": "0.1.0",
+  "description": "MongoDB middleware developed on top of official node-mongodb-native.",
+  "main": "lib/mongo.js",
+  "author": "Caique Rodrigues <caiquepeixoto1@gmail.com>",
+  "keywords": [
+    "koa",
+    "middleware",
+    "mongo",
+    "mongodb",
+    "nosql"
+  ],
+  "engines": {
+    "node": ">= 4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/caique/koa-mongo-driver.git"
+  },
+  "license": "MIT"
+}
