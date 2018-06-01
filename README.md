@@ -1,5 +1,9 @@
 # koa-mongo-driver
-> MongoDB middleware developed on top of official node-mongodb-native.
+
+[![NPM version][npm-version]][npm-url]
+[![Node.js Version][node-version]](http://nodejs.org/download/)
+
+>MongoDB middleware developed on top of official node-mongodb-native.
 
 ## Installation
 
@@ -96,3 +100,7 @@ app.use(async (ctx) => {
 
 app.listen(3000);
 ```
+
+[npm-url]: https://www.npmjs.com/package/koa
+[npm-version]: https://img.shields.io/npm/v/koa-mongo-driver.svg?style=flat-square
+[node-version]: https://img.shields.io/node/v/koa-mongo-driver.svg?style=flat
