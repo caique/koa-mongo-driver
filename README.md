@@ -17,6 +17,8 @@ npm install koa-mongo-driver --save
 yarn add koa-mongo-driver
 ```
 
+*You will need a MongoDB instance running to be able to use this package.*
+
 ## Basic Usage
 ```js
 const Koa = require('koa');
