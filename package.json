@@ -18,6 +18,7 @@
   },
   "scripts": {
     "test": "jest --detectOpenHandles",
+    "test:ci": "jest --config jest.config.ci.js",
     "posttest": "eslint . --fix",
     "precommit": "npm test",
     "prepush": "npm test"
