@@ -39,6 +39,6 @@
     "mongodb-memory-server": "^1.7.4"
   },
   "engines": {
-    "node": ">= 4"
+    "node": "> 6"
   }
 }
