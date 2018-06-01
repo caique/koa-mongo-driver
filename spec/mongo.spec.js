@@ -133,12 +133,9 @@ describe('mongo', () => {
 
       await mongo(userOptions)(ctx, next);
 
-      const expectedBody = {
-        success: false,
-        error: 'Connection to MongoDB could not be estabilished.',
-      };
-
-      expect(ctx.body).toEqual(expectedBody);
+      expect(ctx.body.success).toBeFalsy();
+      expect(ctx.body.message).toEqual('Connection to MongoDB could not be estabilished.');
+      expect(ctx.body.error).toBeDefined();
       expect(next).toHaveBeenCalledTimes(0);
     });
   });
