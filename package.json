@@ -5,6 +5,9 @@
   "license": "MIT",
   "main": "lib/mongo.js",
   "author": "Caique Rodrigues <caiquepeixoto1@gmail.com>",
+  "publishConfig": {
+    "access": "public"
+  },
   "keywords": [
     "koa",
     "middleware",
