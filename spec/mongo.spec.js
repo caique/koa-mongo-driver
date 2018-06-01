@@ -1,5 +1,4 @@
 const { MongoError, MongoNetworkError } = require('mongodb');
-const uuid = require('uuid-random');
 
 const mongo = require('lib/mongo');
 
@@ -37,14 +36,15 @@ describe('mongo', () => {
       const ctx = {};
 
       const next = jest.fn(async () => {
-        const collection = ctx.mongo.db(uuid()).collection('objects');
+        const collection = ctx.mongo.db('test').collection('objects');
 
-        const sampleObject = { _id: 'some-id', content: 'This is a sample object.' };
+        const sampleObject = { content: 'Just a sample object.' };
+
         await collection.insertOne(sampleObject);
+        const retrievedObject = await collection.findOne(sampleObject);
+        await collection.removeMany(sampleObject);
 
-        const retrievedObject = await collection.findOne({ _id: 'some-id' });
-
-        expect(retrievedObject).toEqual(sampleObject);
+        expect(retrievedObject.content).toEqual(sampleObject.content);
       });
 
       await mongo()(ctx, next);

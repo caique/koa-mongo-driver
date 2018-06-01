@@ -34,9 +34,7 @@
     "jest": "^23.0.1",
     "jest-environment-node": "^23.0.1",
     "koa": "^2.5.1",
-    "mongodb-memory-server": "^1.7.4",
-    "supertest": "^3.1.0",
-    "uuid-random": "^1.0.6"
+    "mongodb-memory-server": "^1.7.4"
   },
   "engines": {
     "node": ">= 4"
