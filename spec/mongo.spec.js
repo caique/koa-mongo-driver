@@ -1,3 +1,4 @@
+const uuid = require('uuid-random');
 const mongo = require('lib/mongo');
 
 describe('mongo', () => {
@@ -37,6 +38,24 @@ describe('mongo', () => {
       await mongo()(ctx, next);
 
       expect(ctx.mongo.s.options.useNewUrlParser).toBeTruthy();
+      expect(next).toHaveBeenCalled();
+    });
+
+    it('persists an object', async () => {
+      const ctx = {};
+
+      const next = jest.fn(async () => {
+        const collection = ctx.mongo.db(uuid()).collection('objects');
+
+        const sampleObject = { _id: 'some-id', content: 'This is a sample object.' };
+        await collection.insertOne(sampleObject);
+
+        const retrievedObject = await collection.findOne({ _id: 'some-id' });
+
+        expect(retrievedObject).toEqual(sampleObject);
+      });
+
+      await mongo()(ctx, next);
       expect(next).toHaveBeenCalled();
     });
   });
