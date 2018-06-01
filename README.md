@@ -1,7 +1,9 @@
 # koa-mongo-driver
 
-[![NPM version][npm-version]][npm-url]
-[![Node.js Version][node-version]](http://nodejs.org/download/)
+[![Package Version][npm-badge]][npm-url]
+[![Node Version][node-badge]][node-url]
+[![Codecov][codecov-badge]][codecov-url]
+[![Build][travis-badge]][travis-url]
 
 >MongoDB middleware developed on top of official node-mongodb-native.
 
@@ -103,6 +105,14 @@ app.use(async (ctx) => {
 app.listen(3000);
 ```
 
+[npm-badge]: https://img.shields.io/npm/v/koa-mongo-driver.svg?style=flat-square
 [npm-url]: https://www.npmjs.com/package/koa
-[npm-version]: https://img.shields.io/npm/v/koa-mongo-driver.svg?style=flat-square
-[node-version]: https://img.shields.io/node/v/koa-mongo-driver.svg?style=flat
+
+[node-badge]: https://img.shields.io/node/v/koa-mongo-driver.svg?style=flat
+[node-url]: http://nodejs.org/download/
+
+[codecov-badge]: https://codecov.io/gh/caique/koa-mongo-driver/branch/master/graph/badge.svg
+[codecov-url]: https://codecov.io/gh/caique/koa-mongo-driver
+
+[travis-badge]: https://travis-ci.org/caique/koa-mongo-driver.svg?branch=master
+[travis-url]: https://travis-ci.org/caique/koa-mongo-driver
