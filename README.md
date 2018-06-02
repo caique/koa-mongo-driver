@@ -106,7 +106,7 @@ app.listen(3000);
 ```
 
 [npm-badge]: https://img.shields.io/npm/v/koa-mongo-driver.svg?style=flat-square
-[npm-url]: https://www.npmjs.com/package/koa
+[npm-url]: https://www.npmjs.com/package/koa-mongo-driver
 
 [node-badge]: https://img.shields.io/node/v/koa-mongo-driver.svg?style=flat
 [node-url]: http://nodejs.org/download/
