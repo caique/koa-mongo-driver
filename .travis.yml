@@ -16,9 +16,8 @@ after_script:
 - "./node_modules/.bin/codecov"
 deploy:
   provider: npm
-  email: caiquepeixoto1@gmail.com
-  api_key:
-    secure: EmAWn3G7NhK0oXqhPf7g4LNV58O36h/lbGucc8BThNq5rxcLpzq4Mp6JuCE1e+7Q9uPM02ClpQhu5z7KIrFYNjTleZmw2NnmfBWBns8TiggMm9VoZmr4wfNCl7gFpP0z3YupVcvWo622t8VKAZpNmfW3970vnVBjQdxjqip3cAehvHlXYJPKLsun6NGW81Hrv48ZLA6GLG09dJCBWzvvyNGc2fW86tZwOtIbI9urO2yd4HvC42G7GkCDjt9gmRHPh0F8fD4KwHduBY5/hQAgC7GNZ51odlSCVSdYpbjihGqeR1/lzcvjoz87Bb9pCk9/ncdTQUq1eL+YOft6VPN8Hzf1bBNoahCZLeKz/5zX3eKvn9+wuRp2yNbdwFzEyc94H+tIr5rfJp8Lzi2qAMCirAzHzFsSzEcAITXRqSqCAj3Nx2yEP6zCW2OCpWdPPigw28ctiRFcpBu9Yl8BSkWhxl7S9CE6eMcMx/skbI8Fj9C0jvP8Us8Uq0Ix006hi7OFnNNZJeT/ArZdTY0iKw6KmFauI4D0BBr+1B5ED94iCL/YVY74ueww8uTD4G2L3pKEOoXGX7VEpS0qudT+roAYf0grtIK8THbSZzjh3dzWDxMzaM4ans0SarLL581IHkdYCXTkHYcfHtgZgE6quvSRYgUtEk5rSnS8hYTrMduIVzY=
+  email: $NPM_EMAIL
+  api_key: $NPM_TOKEN
   on:
     tags: true
     repo: caique/koa-mongo-driver
